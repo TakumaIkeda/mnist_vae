@@ -1,0 +1,33 @@
+[project]
+name = "mnist-vae"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "TakumaIkeda", email = "i.taku0415@gmail.com" }
+]
+dependencies = [
+    "torch>=2.5.1",
+    "torchvision>=0.20.1",
+    "ipykernel>=6.29.5",
+    "matplotlib>=3.9.3",
+    "tensorboard>=2.18.0",
+    "torch-tb-profiler>=0.4.3",
+    "tensorflow>=2.18.0",
+    "imageio>=2.36.1",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mnist_vae"]
